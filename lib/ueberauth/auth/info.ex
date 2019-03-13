@@ -15,6 +15,7 @@ defmodule Ueberauth.Auth.Info do
           image: binary | nil,
           phone: binary | nil,
           gender: atom | nil,
+          areas: {:array, binary} | [],
           urls: map
         }
 
@@ -36,6 +37,7 @@ defmodule Ueberauth.Auth.Info do
             phone: nil,
             #  A map containing key value pairs of an identifier for the website and its URL. For instance, an entry could be "Blog" => "http://intridea.com/blog"
             gender: :default,
+            areas: [],
             urls: %{}
 
   def valid?(%Info{name: name}) when is_binary(name), do: true
