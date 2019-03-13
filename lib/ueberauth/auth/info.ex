@@ -14,6 +14,7 @@ defmodule Ueberauth.Auth.Info do
           description: binary | nil,
           image: binary | nil,
           phone: binary | nil,
+          avatar: binary | nil,
           gender: atom | nil,
           urls: map
         }
@@ -34,6 +35,7 @@ defmodule Ueberauth.Auth.Info do
             image: nil,
             #  The telephone number of the authenticating user (no formatting is enforced).
             phone: nil,
+            avatar: nil,
             #  A map containing key value pairs of an identifier for the website and its URL. For instance, an entry could be "Blog" => "http://intridea.com/blog"
             gender: :default,
             urls: %{}
